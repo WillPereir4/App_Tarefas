@@ -1,0 +1,39 @@
+<div class="tarefas-box">
+    <button routerLink="/cadastro">Cadastra nova Tarefa</button>
+    <div class="Input-box">
+      <label>Procurar:</label>
+      <input type="text" placeholder="Qual tarefa está buscando ?" (input)="search($event)" >
+    </div>
+</div>
+
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Título</th>
+      <th>Descrição</th>
+      <th>Status</th>
+      <th>Data de Crição</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let tarefa of tarefas" >
+    <tr>
+      <td></td>
+      <td>{{ tarefa.titulo }}</td>
+      <td>{{ tarefa.descricao }}</td>
+      <td>{{ tarefa.status }}</td>
+      <td>{{ tarefa.dataDeCriacao }}</td>
+      <td>
+        <button>Editar</button>
+        <button>Detalhes</button>
+      </td>
+      <td>
+        <button>Excluir</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

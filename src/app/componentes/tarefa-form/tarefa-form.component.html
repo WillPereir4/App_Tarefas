@@ -1,0 +1,28 @@
+<h1>Cadastrar Tarefa</h1>
+
+<form [formGroup]="tarefaForm" (ngSubmit)="submit()" #formDit="ngForm">
+
+  <div class="input_box">
+    <label for="">Tarefa:</label>
+    <input type="text" formControlName="tarefa" placeholder="Informe a tarefa" required>
+  </div>
+
+  <div class="input_box">
+    <label for="">Descrição:</label>
+    <input type="text" formControlName="descricao" placeholder="Informe a tarefa" required>
+  </div>
+
+  <div class="input_box">
+    <label for="">Status:</label>
+    <select id="status" formControlName="status" required>
+      <option value="Pendente">Pendente</option>
+      <option value="Concluído">Concluído</option>
+    </select>
+  </div>
+
+  <div class="btn-box">
+    <button type="submit" >Cadastrar</button>
+    <button>Voltar</button>
+  </div>
+
+</form>
